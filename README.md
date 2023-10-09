@@ -50,39 +50,25 @@ http://116.205.225.100:8888/holiday?year=2023&month=10&day=1  // 查询某一天
 
 ```json
 {
-	"code": 0,
-	"message": "OK",
-	"data": {
-		"dates": [{
-			"weekday": 6,
-			"weekday_str_cn": "星期六",
-			"weekday_str": "Saturday",
-			"holiday": {
-				"name": "国庆节",
-				"work": false
-			},
-			"lunar": {
-				"year": 2023,
-				"month": 8,
-				"day": 16,
-				"solar": ""
-			}
-		}, {
-			"weekday": 6,
-			"weekday_str_cn": "星期六",
-			"weekday_str": "Saturday",
-			"holiday": {
-				"name": "国庆节",
-				"work": false
-			},
-			"lunar": {
-				"year": 2023,
-				"month": 8,
-				"day": 16,
-				"solar": ""
-			}
-		}]
-	}
+    "code": 0,
+    "message": "OK",
+    "data": {
+        "dates": [
+            {
+                "year": 2023,
+                "month": 10,
+                "day": 1,
+                "lunarYear": 2023,
+                "lunarMonth": 8,
+                "lunarDate": 17,
+                "lDate": "十七",
+                "lMonth": "八",
+                "weekday": 0,
+                "term": "国庆节",
+                "status": 1
+            }
+        ]
+    }
 }
 ```
 
@@ -90,12 +76,58 @@ http://116.205.225.100:8888/holiday?year=2023&month=10&day=1  // 查询某一天
 ```
 http://116.205.225.100:8888/holiday?year=2023&month=10 // 查询某一月的信息
 ```
-
+```json
+{
+    "code": 0,
+    "message": "OK",
+    "data": {
+        "dates": [
+            {
+                "year": 2023,
+                "month": 10,
+                "day": 1,
+                "lunarYear": 2023,
+                "lunarMonth": 8,
+                "lunarDate": 17,
+                "lDate": "十七",
+                "lMonth": "八",
+                "weekday": 0,
+                "term": "国庆节",
+                "status": 1
+            }
+            // 当月剩余信息 ...
+        ]
+    }
+}
+```
 ### 示例3
 ```
 http://116.205.225.100:8888/holiday?year=2023 // 查询某一年的信息
 ```
-
+```json
+{
+    "code": 0,
+    "message": "OK",
+    "data": {
+        "dates": [
+            {
+                "year": 2023,
+                "month": 10,
+                "day": 1,
+                "lunarYear": 2023,
+                "lunarMonth": 8,
+                "lunarDate": 17,
+                "lDate": "十七",
+                "lMonth": "八",
+                "weekday": 0,
+                "term": "国庆节",
+                "status": 1
+            }
+            // 当年剩余信息 ...
+        ]
+    }
+}
+```
 ### 错误码
 
 
